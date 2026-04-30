@@ -1,0 +1,23 @@
+name: CI-Workflow1
+on:
+  push:
+    branches: [main, dev.guille, dev-maxi]
+  pull_request:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Configuracion de Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+      - name: Build con maven
+        run: mvn build
+        
+      - name: Ejecutar Testeo con maven
+        run: mvn clean verify
+
+  
