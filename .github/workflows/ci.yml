@@ -14,10 +14,8 @@ jobs:
         with:
           java-version: '21'
           distribution: 'temurin'
-      - name: Build con maven
-        run: mvn build
-        
-      - name: Ejecutar Testeo con maven
+
+      - name: Ejecutar Build & Testeo con maven
         run: mvn clean verify
 
   
