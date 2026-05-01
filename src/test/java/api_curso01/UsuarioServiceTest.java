@@ -37,7 +37,7 @@ class UsuarioServiceTest {
         assertEquals(1, resultado.size());
         assertEquals("Maxi", resultado.get(0).getNombre());
 
-        // 4. Verificar interacción
+        // 4. Verificar interacciónw
         verify(repository).findAll();
     }
 }
